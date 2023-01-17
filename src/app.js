@@ -34,11 +34,12 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let currentDateElement = document.querySelector("#current-date");
-  currentDateElement.innerHTML = formatDate(response.data.time);
+  currentDateElement.innerHTML = formatDate(response.data.time * 1000);
 }
 
 let apiKey = "1c0f6e49a911db65307b85186bd4t6oe";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Amsterdam&key=${apiKey}`;
+let city = "Amsterdam";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
 console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
