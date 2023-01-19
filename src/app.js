@@ -35,6 +35,9 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let currentDateElement = document.querySelector("#current-date");
   currentDateElement.innerHTML = formatDate(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", response.data.condition.icon_url);
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 let apiKey = "1c0f6e49a911db65307b85186bd4t6oe";
