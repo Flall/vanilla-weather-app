@@ -67,3 +67,12 @@ li:first-letter {
 #fahrenheit-link {
   text-decoration: none;
 }
+
+#celsius-link {
+  text-decoration: none;
+}
+
+.weather-temperature .active {
+  color: #ef5f9a;
+  cursor: default;
+}
