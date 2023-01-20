@@ -25,11 +25,13 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+
 .weather-app {
+  background-color: rgb(250, 209, 88, 0.8);
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
-  border: 3px inset #9874f3;
+  border: 5px solid #9874f3;
   border-radius: 5px;
 }
 
@@ -60,19 +62,41 @@ li:first-letter {
   top: -32px;
 }
 
+#form-input {
+  border: 2px solid #9874f3;
+  box-shadow: 3px 3px 10px #9874f3;
+  background-color: rgb(239, 95, 154, 0.8);
+}
+
+#search-button {
+  color: #8d65f2;
+  font-weight: 600;
+  line-height: 28px;
+  border: 2px solid #9874f3;
+  border-radius: 4px;
+  box-shadow: 3px 3px 10px #9874f3;
+  background: rgb(119, 211, 208);
+}
+
+#search-button:hover {
+  transition: all 200ms ease-in-out;
+  background-color: rgb(109, 201, 198);
+}
+
 #footer {
   text-decoration: none;
 }
 
 #fahrenheit-link {
   text-decoration: none;
+  color: #ef5f9a;
 }
 
 #celsius-link {
   text-decoration: none;
+  color: #ef5f9a;
 }
 
 .weather-temperature .active {
-  color: #ef5f9a;
   cursor: default;
 }
