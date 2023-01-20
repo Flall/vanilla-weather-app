@@ -43,20 +43,22 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-//function search(city) {
-let apiKey = "1c0f6e49a911db65307b85186bd4t6oe";
-let city = "Amsterdam";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+function search(city) {
+  let apiKey = "1c0f6e49a911db65307b85186bd4t6oe";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
-console.log(apiUrl);
-axios.get(apiUrl).then(displayTemperature);
-//}
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-/*function handleSubmit(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
-}*/
+  let city = document.querySelector("#form-input").value;
+  search(city);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#current-temperature");
