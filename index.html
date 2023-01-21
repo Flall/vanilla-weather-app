@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/38503a83e2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -27,7 +31,7 @@
         <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-6">
+              <div class="col-8">
                 <input
                   type="search"
                   placeholder="Enter a city"
@@ -37,21 +41,25 @@
                   id="form-input"
                 />
               </div>
-              <div class="col-3">
-                <input
+              <div class="col-2">
+                <button
                   type="submit"
                   value="Search"
                   id="search-button"
                   class="mt-1 w-100"
-                />
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
               </div>
-              <div class="col-3">
-                <input
+              <div class="col-2">
+                <button
                   type="submit"
                   value="Location"
                   id="button-current-location"
                   class="mt-1 w-100"
-                />
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </button>
               </div>
             </div>
           </form>
