@@ -1,6 +1,9 @@
 function formatDate(timestamp) {
   //calculate the date
   let date = new Date(timestamp);
+  let currentDate = date.getDate();
+  let year = date.getFullYear();
+
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -19,7 +22,23 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  return `${day} ${hours}:${minutes} | ${month} ${currentDate}, ${year}`;
 }
 
 function formatDay(timestamp) {
