@@ -149,9 +149,9 @@ function displayFahrenheitTemperature(event) {
   document.querySelector("#feels-like").innerHTML = Math.round(
     (feelsLikeElement * 9) / 5 + 32
   );
-  document.querySelector("#wind").innerHTML = `${
-    Math.round(windSpeed) / 1.609
-  } mph`;
+  document.querySelector("#wind").innerHTML = `${Math.round(
+    windElement / 1.609
+  )} mph`;
 
   fahrenheitLink.removeEventListener("click", displayFahrenheitTemperature);
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
