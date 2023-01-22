@@ -74,10 +74,10 @@ function displayForecast(response) {
           width="48"
         />
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
+          <span class="weather-forecast-temperature-max" id="forecast-max"> ${Math.round(
             forecastDay.temperature.maximum
           )}° |</span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
+          <span class="weather-forecast-temperature-min" id="forecast-min"> ${Math.round(
             forecastDay.temperature.minimum
           )}°</span>
         </div>
@@ -141,8 +141,8 @@ searchForm.addEventListener("submit", handleSubmit);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   //remove the active class from the celsius link
-  fahrenheitLink.classList.add("active");
   celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#current-temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
@@ -159,8 +159,8 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#feels-like").innerHTML =
