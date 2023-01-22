@@ -101,6 +101,8 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 
   celsiusTemperature = response.data.temperature.current;
+  feelsLikeTemperature = response.data.temperature.feels_like;
+  windSpeed = response.data.wind.speed;
 
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -147,10 +149,10 @@ function displayFahrenheitTemperature(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
   document.querySelector("#feels-like").innerHTML = Math.round(
-    (feelsLikeElement * 9) / 5 + 32
+    (feelsLikeTemperature * 9) / 5 + 32
   );
   document.querySelector("#wind").innerHTML = `${Math.round(
-    windElement / 1.609
+    windSpeed / 1.609
   )} mph`;
 
   fahrenheitLink.removeEventListener("click", displayFahrenheitTemperature);
@@ -164,8 +166,8 @@ function displayCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#feels-like").innerHTML =
-    Math.round(feelsLikeElement);
-  document.querySelector("#wind").innerHTML = `${Math.round(windElement)} km/h`;
+    Math.round(feelsLikeTemperature);
+  document.querySelector("#wind").innerHTML = `${Math.round(windSpeed)} km/h`;
 
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
   celsiusLink.removeEventListener("click", displayCelsiusTemperature);
@@ -190,8 +192,8 @@ let currentLocation = document.querySelector("#button-current-location");
 currentLocation.addEventListener("click", getCurrentPosition);
 
 let celsiusTemperature = null;
-let feelsLikeElement = null;
-let windElement = null;
+let feelsLikeTemperature = null;
+let windSpeed = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
