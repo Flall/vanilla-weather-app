@@ -142,11 +142,8 @@ function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "1c0f6e49a911db65307b85186bd4t6oe";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat${lat}=&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
   axios.get(apiUrl).then(displayTemperature);
-
-  apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
-  axios.get(api.Url).then(displayForecast);
 }
 
 function getCurrentPosition(event) {
