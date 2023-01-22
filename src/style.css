@@ -30,6 +30,25 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+footer {
+  color: #000000;
+  font-size: 13px;
+  line-height: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+a.footer {
+  color: #9874f3;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+a.footer:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .weather-app {
   max-width: 650px;
   margin: 30px auto;
@@ -44,14 +63,22 @@ li:first-letter {
   margin: 30px auto;
 }
 
+.fa-solid {
+  font-size: 18px;
+}
+
+.fa-solid:hover {
+  font-size: 22px;
+}
+
 .overview {
   margin-bottom: 20px;
 }
 
 .weather-temperature img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 70px;
+  width: 70px;
 }
 
 .weather-temperature strong {
@@ -77,11 +104,11 @@ li:first-letter {
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .weather-forecast-temperature-min {
-  font-size: 13px;
+  font-size: 15px;
   color: black;
   opacity: 0.5;
 }
@@ -105,21 +132,31 @@ li:first-letter {
 #search-button:hover,
 #button-current-location:hover {
   transition: all 200ms ease-in-out;
-  background-color: rgb(109, 201, 198);
+  background-color: rgb(99, 191, 188);
 }
-
-#footer {
-  text-decoration: none;
+#description {
+  font-weight: 600;
 }
 
 #fahrenheit-link {
   text-decoration: none;
   color: #ef5f9a;
 }
+#fahrenheit-link:hover {
+  text-decoration: none;
+  color: #9874f3;
+  font-size: 20px;
+}
 
 #celsius-link {
   text-decoration: none;
   color: #ef5f9a;
+}
+
+#celsius-link:hover {
+  text-decoration: none;
+  color: #9874f3;
+  font-size: 20px;
 }
 
 .weather-temperature .active {

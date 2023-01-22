@@ -66,7 +66,9 @@
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li>Last updated: <span id="current-date"></span></li>
+              <li>
+                <strong>Last updated:</strong> <span id="current-date"></span>
+              </li>
               <li id="description"></li>
             </ul>
           </div>
@@ -85,25 +87,41 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
-                <li>Feels like: <span id="feels-like"></span>°</li>
+                <li><strong>Humidity:</strong> <span id="humidity"></span>%</li>
+                <li><strong>Wind:</strong> <span id="wind"></span>km/h</li>
+                <li>
+                  <strong>Feels like:</strong> <span id="feels-like"></span>°
+                </li>
               </ul>
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small>
-          <a
-            href="https://github.com/Flall/vanilla-weather-app"
-            target="_blank"
-            id="footer"
-            >Open-source code</a
-          >
-          by Francesca Lalli</small
-        >
       </div>
     </div>
+    <footer>
+      Coded by
+      <a
+        href="https://www.linkedin.com/in/francescalalli/"
+        class="footer"
+        target="_blank"
+        >Francesca Lalli</a
+      >
+      open-sourced on
+      <a
+        href="https://github.com/Flall/vanilla-weather-app"
+        target="_blank"
+        class="footer"
+        >GitHub</a
+      >
+      and hosted on
+      <a
+        href="https://zesty-biscochitos-178337.netlify.app/"
+        class="footer"
+        target="_blank"
+        >Netlify</a
+      >
+    </footer>
     <script src="src/app.js"></script>
   </body>
 </html>
