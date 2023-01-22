@@ -191,7 +191,7 @@ currentLocation.addEventListener("click", getCurrentPosition);
 
 let celsiusTemperature = null;
 let feelsLikeElement = null;
-let windSpeed = null;
+let windElement = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
