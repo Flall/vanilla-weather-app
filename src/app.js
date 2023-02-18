@@ -155,6 +155,20 @@ function displayFahrenheitTemperature(event) {
     windSpeed / 1.609
   )} mph`;
 
+  /*point at the forecast temps
+  let forecastMaxTemperatures = document.querySelectorAll(
+    ".weather-forecast-temperature-max"
+  );
+  forecastMaxTemperatures.forEach(function (maxTemperature, index) {
+    console.log({ maxTemperature: maxTemperature.innerHTML });
+    let maxTempValue = maxTemperature.innerHTML
+      .replaceAll(" ", "")
+      .replace("°|", "");
+    let maxTempFahrenheit = (maxTempValue * 9) / 5 + 32;
+    maxTemperature.innerHTML = " " + Math.round(maxTempFahrenheit) + "° |";
+    console.log(maxTempFahrenheit);
+  });*/
+
   fahrenheitLink.removeEventListener("click", displayFahrenheitTemperature);
   celsiusLink.addEventListener("click", displayCelsiusTemperature);
 }
